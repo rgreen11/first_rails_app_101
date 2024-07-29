@@ -1,4 +1,5 @@
 class ApplicationJob < ActiveJob::Base
+  # https://github.com/rails/rails/tree/main/activerecord
   # Automatically retry jobs that encountered a deadlock
   # retry_on ActiveRecord::Deadlocked
 
