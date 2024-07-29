@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
   def index
     @articles = Article.all
   end
@@ -12,10 +13,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # binding.pry
-    # logger.debug params
-    @article = Article.new(title: , body: "...")
-
+    article = params[:article]
+    @article = Article.new(title: article[:title], body: article[:body])
     if @article.save
       redirect_to @article
     else
